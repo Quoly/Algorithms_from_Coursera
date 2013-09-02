@@ -1,11 +1,7 @@
 import random
 
-#inp = {1: [2, 3, 4], 2: [1, 3], 3: [1, 2, 4], 4: [1, 3]}
-inp2 = {1: [2, 3, 4, 7], 2: [1, 3, 4], 3: [1, 2, 4], 4: [1, 2, 3, 5], 5: [4, 6, 7, 8], 6: [5, 7, 8], 7: [1, 5, 6, 8], 8:[5, 6, 7]}
-
 def checkSelfLoops(checkDict):
-	keys = checkDict.keys()
-	for key in keys:
+	for key in checkDict:
 		checkDict[key] = [y for y in checkDict[key] if y != key]
 	return checkDict
 
@@ -50,12 +46,4 @@ dict1 = min_cut(dict1)
 length = len(dict1[list(dict1.keys())[1]])
 print(length)
 
-'''
-for i in range(100):
-	dict0 = myDict.copy()
-	dict0 = min_cut(dict0)
-	print(dict0)
-	#length = len(dict0[list(dict0.keys())[0]])
-	print(length)
-'''
 f.close()	
